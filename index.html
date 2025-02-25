@@ -4,8 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AsciiWizard</title>
+    <link rel="stylesheet" href="/src/css/main.css">
 </head>
-<body>
-    
+<body class="light-mode">
+    <header>
+        <div class="header-title">
+            <h1>AsciiWizard</h1>
+            <span>Convert ASCII, Binary, and Text Instantly!</span>
+        </div>
+        <button class="theme-toggle" onclick="toggleTheme()" title="Toggle Theme">☀️</button>
+    </header>
+
+    <div class="main-container">
+        <div class="input-section">
+            <textarea id="input" placeholder="Enter your ASCII, Binary, or Text here..."></textarea>
+            <div class="controls">
+                <select id="inputMode">
+                    <option value="ascii">ASCII to Text</option>
+                    <option value="text">Text to ASCII</option>
+                    <option value="binary">Binary to Text</option>
+                    <option value="textBinary">Text to Binary</option>
+                </select>
+                <div></div>
+                <button onclick="convert()">Convert</button>
+                <button class="secondary-btn" onclick="clearInput()">Clear</button>
+                <button class="secondary-btn" onclick="copyOutput()">Copy</button>
+                <button class="secondary-btn" onclick="swapContent()">Swap</button>
+            </div>
+        </div>
+
+        <div class="output-section">
+            <textarea id="output" placeholder="Converted output will appear here..." readonly></textarea>
+        </div>
+    </div>
+
+    <footer>
+        Created by John Lemar Gonzales | <a href="https://github.com/CyberSphinxxx/AsciiWizard" style="color: #007bff">Learn More</a>
+    </footer>
+
+    <script src="/src/js/main.js"></script>
 </body>
 </html>
