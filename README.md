@@ -24,3 +24,15 @@ Built with pure HTML, CSS, and JavaScript (no frameworks).
   - Swap input and output content
 - **Error Handling:** Robust validation for invalid inputs
 - **Accessibility:** Keyboard-friendly (Enter key triggers conversion)
+
+## Usage
+
+1. Select conversion mode from the dropdown
+2. Enter your input in the top textarea
+3. See the converted result instantly in the bottom textarea
+4. Use the buttons to:
+   - Convert manually
+   - Clear content
+   - Copy output
+   - Swap input/output
+5. Toggle between light/dark mode using the icon in the header
