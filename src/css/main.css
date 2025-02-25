@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+@media (min-width: 769px) {
+    html, body {
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 768px) {
+    html, body {
+        overflow-y: auto;
+        height: auto;
+    }
+}
+
+.light-mode {
+    background: #f5f5f5;
+    color: #333;
+}
+
+.dark-mode {
+    background: #1a1a1a;
+    color: #f5f5f5;
+}
+
+header {
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dark-mode header {
+    border-bottom: 1px solid #444;
+}
+
+.header-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+header span {
+    font-size: 1rem;
+    color: #666;
+}
+
+.dark-mode header span {
+    color: #aaa;
+}
+
+.theme-toggle {
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 2rem;
+    flex: 1;
+}
+
+@media (min-width: 769px) {
+    .main-container {
+        height: calc(100% - 66px - 48px);
+    }
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        min-height: calc(100vh - 66px - 48px);
+    }
+}
+
+.input-section, .output-section {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+textarea {
+    width: 100%;
+    flex: 1;
+    padding: 1rem;
+    font-size: 1.1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    resize: none;
+    transition: all 0.3s ease;
+}
+
+.dark-mode textarea {
+    background: #2a2a2a;
+    color: #fff;
+    border-color: #444;
+}
+
+.controls {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: auto 1fr repeat(4, auto);
+    gap: 1rem;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+button, select {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background: #007bff;
+    color: white;
+    transition: transform 0.2s ease;
+}
+
+button:hover, select:hover {
+    transform: scale(1.05);
+}
+
+.dark-mode button {
+    background: #0066cc;
+}
+
+.secondary-btn {
+    background: #6c757d;
+}
+
+.dark-mode .secondary-btn {
+    background: #5a6268;
+}
+
+footer {
+    padding: 1rem;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    font-size: 0.9rem;
+    color: #666;
+    flex-shrink: 0;
+}
+
+.dark-mode footer {
+    border-top: 1px solid #444;
+    color: #aaa;
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        padding: 1rem;
+    }
+    .controls {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        justify-content: center;
+    }
+    .controls select {
+        flex: 1 1 200px; /* Allows select to grow but not too much */
+        max-width: 300px;
+    }
+    .controls button {
+        flex: 0 1 auto; /* Buttons maintain their natural width */
+    }
+    .controls > div { /* Spacer */
+        display: none; /* Remove spacer on mobile */
+    }
+    .input-section, .output-section {
+        min-height: 200px;
+    }
+    textarea {
+        min-height: 150px;
+    }
+}
