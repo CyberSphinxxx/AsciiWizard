@@ -36,3 +36,15 @@ Built with pure HTML, CSS, and JavaScript (no frameworks).
    - Copy output
    - Swap input/output
 5. Toggle between light/dark mode using the icon in the header
+
+## Technical Details
+
+- **Built With:**
+  - HTML5
+  - CSS3 (Flexbox and Grid)
+  - Vanilla JavaScript
+- **Responsive Design:**
+  - Desktop: Fixed height, no scrolling
+  - Mobile: Scrollable with wrapped button layout
+- **Browser Support:** Modern browsers (Chrome, Firefox, Safari, Edge)
+
