@@ -7,12 +7,15 @@
     <link rel="stylesheet" href="/src/css/main.css">
 </head>
 <body class="light-mode">
+
     <header>
         <div class="header-title">
             <h1>AsciiWizard</h1>
             <span>Convert ASCII, Binary, and Text Instantly!</span>
         </div>
+
         <button class="theme-toggle" onclick="toggleTheme()" title="Toggle Theme">☀️</button>
+
     </header>
 
     <div class="main-container">
@@ -25,7 +28,9 @@
                     <option value="binary">Binary to Text</option>
                     <option value="textBinary">Text to Binary</option>
                 </select>
+
                 <div></div>
+                
                 <button onclick="convert()">Convert</button>
                 <button class="secondary-btn" onclick="clearInput()">Clear</button>
                 <button class="secondary-btn" onclick="copyOutput()">Copy</button>
